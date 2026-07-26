@@ -9,9 +9,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/movie/categories/")
-@RequiredArgsConstructor
+
 //@CrossOrigin
 public class CategoryController {
+
+    public CategoryController(CategoryService categoryService) {
+        this.categoryService = categoryService;
+    }
 
     private final CategoryService categoryService;
 

@@ -9,8 +9,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/movie/images/")
-@RequiredArgsConstructor
 public class MovieImageController {
+
+    public MovieImageController(MovieImageService movieImageService) {
+        this.movieImageService = movieImageService;
+    }
 
     private final MovieImageService movieImageService;
 

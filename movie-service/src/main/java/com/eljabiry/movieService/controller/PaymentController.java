@@ -8,9 +8,12 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/movie/payments/")
-@RequiredArgsConstructor
 //@CrossOrigin
 public class PaymentController {
+
+    public PaymentController(PaymentService paymentService) {
+        this.paymentService = paymentService;
+    }
 
     private final PaymentService paymentService;
 

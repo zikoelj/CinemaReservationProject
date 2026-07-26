@@ -12,8 +12,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/movie/actors/")
-@RequiredArgsConstructor
 public class ActorController {
+
+    public ActorController(ActorService actorService) {
+        this.actorService = actorService;
+    }
 
     private final ActorService actorService;
 

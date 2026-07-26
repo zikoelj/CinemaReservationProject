@@ -1,9 +1,6 @@
 package com.eljabiry.movieService.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
@@ -15,4 +12,16 @@ public class CityRequestDto {
     private int movieId;
     private List<String> cityNameList;
     private String token;
+
+    public int getMovieId() {
+        return movieId;
+    }
+
+    public List<String> getCityNameList() {
+        return cityNameList;
+    }
+
+    public String getToken() {
+        return token;
+    }
 }

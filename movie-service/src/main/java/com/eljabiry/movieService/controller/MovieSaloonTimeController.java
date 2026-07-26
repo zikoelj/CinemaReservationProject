@@ -12,9 +12,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/movie/movieSaloonTimes/")
-@RequiredArgsConstructor
 //@CrossOrigin
 public class MovieSaloonTimeController {
+
+    public MovieSaloonTimeController(MovieSaloonTimeService movieSaloonTimeService) {
+        this.movieSaloonTimeService = movieSaloonTimeService;
+    }
 
     private final MovieSaloonTimeService movieSaloonTimeService;
 

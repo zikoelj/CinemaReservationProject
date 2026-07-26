@@ -12,8 +12,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/movie/cities/")
-@RequiredArgsConstructor
 public class CityController {
+
+    public CityController(CityService cityService) {
+        this.cityService = cityService;
+    }
 
     private final CityService cityService;
 

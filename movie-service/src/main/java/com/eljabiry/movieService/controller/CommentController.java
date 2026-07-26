@@ -14,8 +14,11 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/movie/comments/")
 @CrossOrigin
-@RequiredArgsConstructor
 public class CommentController {
+
+    public CommentController(CommentService commentService) {
+        this.commentService = commentService;
+    }
 
     private final CommentService commentService;
 

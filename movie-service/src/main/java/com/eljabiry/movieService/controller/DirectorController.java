@@ -12,8 +12,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/movie/directors/")
-@RequiredArgsConstructor
 public class DirectorController {
+
+    public DirectorController(DirectorService directorService) {
+        this.directorService = directorService;
+    }
 
     private final DirectorService directorService;
 
