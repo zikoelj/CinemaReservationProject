@@ -19,15 +19,13 @@ public class JwtProviderServiceImpl implements JwtProviderService{
 
     public String generateToken(Authentication authentication) {
 
-        String token = Jwts.builder()
+        return  Jwts.builder()
                 .claim("authorities", authentication.getAuthorities())
                 .setSubject(authentication.getName())
                 .setIssuedAt(new Date())
                 .setExpiration(java.sql.Date.valueOf(LocalDate.now().plusWeeks(2)))
                 .signWith(Keys.hmacShaKeyFor(key.getBytes()))
                 .compact();
-
-        return token;
     }
 
 }
