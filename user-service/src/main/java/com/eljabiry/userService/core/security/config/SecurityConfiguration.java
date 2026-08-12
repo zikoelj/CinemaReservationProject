@@ -51,6 +51,7 @@ public class SecurityConfiguration {
                         authorizationManagerRequestMatcherRegistry.
                                 requestMatchers(HttpMethod.POST, "/api/user/auth/**").permitAll()
                                 .requestMatchers("/api/user/users/**").permitAll()
+                                .requestMatchers("/actuator/health").permitAll()
                                 .anyRequest().authenticated())
                 .addFilterAfter(new TokenVerifierFilter(), UsernamePasswordAuthenticationFilter.class);
         return http.build();
