@@ -7,7 +7,6 @@
     <groupId>net.eljabiry</groupId>
     <artifactId>MSCinema</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -18,12 +17,5 @@
         <maven.compiler.target>18</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <modules>
-        <module>user-service</module>
-        <module>movie-service</module>
-        <module>config-service</module>
-        <module>discovery-service</module>
-        <module>gateway-service</module>
-    </modules>
 
 </project>
